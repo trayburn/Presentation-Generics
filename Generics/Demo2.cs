@@ -9,6 +9,7 @@ namespace Generics
 		public class Sample<T>
 		{
 			public static int Index { get; set; }
+			public static T Value { get; set; }
 		}
 
 		public void Run()
@@ -16,7 +17,11 @@ namespace Generics
 			Banner();
 
 			Sample<int>.Index = 100;
+			Sample<int>.Value = 123;
+			Console.WriteLine(Sample<int>.Index);
+			Console.WriteLine(Sample<int>.Value);
 			Console.WriteLine(Sample<string>.Index);
+			Console.WriteLine(Sample<string>.Value);
 		}
     }
 }
